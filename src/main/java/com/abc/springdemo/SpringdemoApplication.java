@@ -1,5 +1,6 @@
 package com.abc.springdemo;
 
+import com.abc.springdemo.intercept.ProxyBean;
 import com.abc.springdemo.pojo.DataBaseProperties;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -14,6 +15,7 @@ public class SpringdemoApplication {
         ConfigurableApplicationContext ctx = SpringApplication.run(SpringdemoApplication.class, args);
         DataBaseProperties db = ctx.getBean(DataBaseProperties.class);
         db.show();
+        ProxyBean.testProxy();
     }
 
 }

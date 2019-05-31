@@ -44,7 +44,13 @@ public class ProxyBean implements InvocationHandler {
             exceptionFlag = true;
         }
         this.interceptor.after();
-        if
+        if (exceptionFlag) {
+            this.interceptor.afterThrowing();
+        }
+        else {
+            this.interceptor.afterReturning();
+            return retObj;
+        }
         return null;
     }
 
