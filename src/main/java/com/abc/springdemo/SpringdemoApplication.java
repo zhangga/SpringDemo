@@ -8,7 +8,7 @@ import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
-@ComponentScan(basePackages = {"com.abc.springdemo.controller", "com.abc.springdemo.pojo"})
+@ComponentScan(basePackages = {"com.abc.springdemo.controller", "com.abc.springdemo.pojo", "com.abc.springdemo.service"})
 public class SpringdemoApplication {
 
     public static void main(String[] args) {
